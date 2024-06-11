@@ -1,0 +1,18 @@
+[
+  {
+    "name": "전체보기",
+    "path": ""
+  },
+  {
+    "name": "카테고리1",
+    "path": "category1"
+  },
+  {
+    "name": "카테고리2",
+    "path": "category2"
+  },
+  {
+    "name": "카테고리3",
+    "path": "category3"
+  }
+]
