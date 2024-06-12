@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import ThemeSwitch from "./theme/ThemeSwitch";
-import Category from "./category/Category";
+import CategoryNav from "./category-nav/CategoryNav";
 
 export default function Header() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function Header() {
     <header className="flex justify-between items-center h-16">
       <div className="flex space-x-20">
         <div onClick={toMainPage}>WEB MARKET</div>
-        <Category />
+        <CategoryNav />
       </div>
       <div className="flex space-x-3">
         <ThemeSwitch />

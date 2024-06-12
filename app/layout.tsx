@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <div className="min-h-sreen px-5">
+        <div className="flex flex-col min-h-screen px-5">
           <Header />
-          {children}
+          <main className="grow bg-indigo-400">{children}</main>
         </div>
       </body>
     </html>

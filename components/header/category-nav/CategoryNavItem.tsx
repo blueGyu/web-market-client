@@ -7,25 +7,18 @@ interface CategoryItemProps {
   onClick: () => void;
 }
 
-export default function CategoryItem({
+export default function CategoryNavItem({
   path,
   name,
   onClick,
 }: CategoryItemProps) {
-  const pathname = usePathname();
-  const pathnameArray = pathname.split("/");
-  const targetIndex = pathnameArray.indexOf("category") + 1;
+  const pathname = usePathname().split("/")[1];
 
   const backgroundColor = () => {
-    if (pathnameArray.includes("category")) {
-      if (!pathnameArray[targetIndex] && path === "") {
-        return "bg-indigo-800";
-      }
-
-      if (pathnameArray[targetIndex] === path) {
-        return "bg-indigo-800";
-      }
+    if (pathname === path) {
+      return "bg-indigo-800";
     }
+
     return "";
   };
 
@@ -33,7 +26,7 @@ export default function CategoryItem({
     <Link
       key={path}
       className={`block py-3 pl-3 hover:bg-indigo-600 ${backgroundColor()}`}
-      href={`/category/${path}`}
+      href={`/${path}`}
       onClick={onClick}
     >
       {name}

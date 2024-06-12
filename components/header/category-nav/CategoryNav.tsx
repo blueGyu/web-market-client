@@ -2,16 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { useHandleOpened } from "@/lib/utils";
-import CategoryItem from "./CategoryItem";
+import CategoryNavItem from "./CategoryNavItem";
 
 interface CategoryProps {
   path: string;
   name: string;
+  image_url: string;
 }
 
-export default function Category() {
+export default function CategoryNav() {
   const { isOpened, handleOpened } = useHandleOpened(false, "category_wrap");
-  const [categoryLists, setCategoryLists] = useState<CategoryProps[]>([]);
+  const [category, setCategory] = useState<CategoryProps[]>([]);
 
   useEffect(() => {
     const fetchCategory = async () => {
@@ -21,7 +22,7 @@ export default function Category() {
 
       if (response.ok) {
         const categoryLists = await response.json();
-        setCategoryLists(categoryLists.data);
+        setCategory(categoryLists.data);
       } else {
         console.error("Error: 'fetchCategory' has error");
       }
@@ -38,9 +39,9 @@ export default function Category() {
           id="category_wrap"
           className="absolute bg-indigo-400 w-40 rounded overflow-hidden"
         >
-          {categoryLists.map(({ name, path }) => {
+          {category.map(({ name, path }) => {
             return (
-              <CategoryItem
+              <CategoryNavItem
                 key={path}
                 name={name}
                 path={path}
