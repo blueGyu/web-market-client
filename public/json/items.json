@@ -1,0 +1,249 @@
+[
+  {
+    "id": "1",
+    "name": "Cap",
+    "description": "모자 3D 모델입니다.",
+    "category": "cloth",
+    "price": 7360,
+    "img_info": [
+      { "img_name": "cap_iso", "img_path": "/images/cloth/cap/cap_iso.png" },
+      {
+        "img_name": "cap_front",
+        "img_path": "/images/cloth/cap/cap_front.png"
+      },
+      {
+        "img_name": "cap_right",
+        "img_path": "/images/cloth/cap/cap_right.png"
+      },
+      { "img_name": "cap_left", "img_path": "/images/cloth/cap/cap_left.png" },
+      { "img_name": "cap_back", "img_path": "/images/cloth/cap/cap_back.png" }
+    ],
+    "model_url": "https://my.spline.design/capcopy-c628797cdcccae909d390e2684793d07/",
+    "tags": ["cloth", "cap"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater1",
+      "name": "creater1"
+    }
+  },
+  {
+    "id": "2",
+    "name": "T-Shirt Male",
+    "description": "남성 반팔 티셔츠 3D 모델입니다.",
+    "category": "cloth",
+    "price": 8967,
+    "img_info": [
+      {
+        "img_name": "t_shirt_m_iso",
+        "img_path": "/images/cloth/t_shirt_m/t_shirt_m_iso.png"
+      },
+      {
+        "img_name": "t_shirt_m_front",
+        "img_path": "/images/cloth/t_shirt_m/t_shirt_m_front.png"
+      },
+      {
+        "img_name": "t_shirt_m_right",
+        "img_path": "/images/cloth/t_shirt_m/t_shirt_m_right.png"
+      },
+      {
+        "img_name": "t_shirt_m_left",
+        "img_path": "/images/cloth/t_shirt_m/t_shirt_m_left.png"
+      },
+      {
+        "img_name": "t_shirt_m_back",
+        "img_path": "/images/cloth/t_shirt_m/t_shirt_m_back.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/tshirtbodymalecopy-5b085c83647595a0144abca60060a013/",
+    "tags": ["cloth", "t-shirt", "male"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater2",
+      "name": "creater2"
+    }
+  },
+  {
+    "id": "3",
+    "name": "T-Shirt Female",
+    "description": "여성 반팔 티셔츠 3D 모델입니다.",
+    "category": "cloth",
+    "price": 9992,
+    "img_info": [
+      {
+        "img_name": "t_shirt_f_iso",
+        "img_path": "/images/cloth/t_shirt_f/t_shirt_f_iso.png"
+      },
+      {
+        "img_name": "t_shirt_f_front",
+        "img_path": "/images/cloth/t_shirt_f/t_shirt_f_front.png"
+      },
+      {
+        "img_name": "t_shirt_f_right",
+        "img_path": "/images/cloth/t_shirt_f/t_shirt_f_right.png"
+      },
+      {
+        "img_name": "t_shirt_f_left",
+        "img_path": "/images/cloth/t_shirt_f/t_shirt_f_left.png"
+      },
+      {
+        "img_name": "t_shirt_f_back",
+        "img_path": "/images/cloth/t_shirt_f/t_shirt_f_back.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/tshirtbodyfemalecopy-f796d9a3871cc7aa405b19dd18ef9899/",
+    "tags": ["cloth", "t-shirt", "female"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater3",
+      "name": "creater3"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Hoodie",
+    "description": "후드 3D 모델입니다.",
+    "category": "cloth",
+    "price": 6627,
+    "img_info": [
+      {
+        "img_name": "hoodie_iso",
+        "img_path": "/images/cloth/hoodie/hoodie_iso.png"
+      },
+      {
+        "img_name": "hoodie_front",
+        "img_path": "/images/cloth/hoodie/hoodie_front.png"
+      },
+      {
+        "img_name": "hoodie_right",
+        "img_path": "/images/cloth/hoodie/hoodie_right.png"
+      },
+      {
+        "img_name": "hoodie_left",
+        "img_path": "/images/cloth/hoodie/hoodie_left.png"
+      },
+      {
+        "img_name": "hoodie_back",
+        "img_path": "/images/cloth/hoodie/hoodie_back.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/hoodiecopy-4d8be12e48dadd2fba033d2389bab9e4/",
+    "tags": ["cloth", "hoodie"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater4",
+      "name": "creater4"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Relaxing Room",
+    "description": "편안한 방 3D 모델입니다.",
+    "category": "workspace",
+    "price": 5227,
+    "img_info": [
+      {
+        "img_name": "relax_room_iso",
+        "img_path": "/images/workspace/relax_room/relax_room_iso.png"
+      },
+      {
+        "img_name": "relax_room_feature_1",
+        "img_path": "/images/workspace/relax_room/relax_room_feature_1.png"
+      },
+      {
+        "img_name": "relax_room_feature_2",
+        "img_path": "/images/workspace/relax_room/relax_room_feature_2.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/roomrelaxingcopy-71a9aae5ea7c1e93dd3357f77a036324/",
+    "tags": ["cloth", "relax", "room"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater5",
+      "name": "creater5"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Rooftop Room",
+    "description": "옥탑방 3D 모델입니다.",
+    "category": "workspace",
+    "price": 5624,
+    "img_info": [
+      {
+        "img_name": "rooftop_room_iso",
+        "img_path": "/images/workspace/rooftop_room/rooftop_room_iso.png"
+      },
+      {
+        "img_name": "rooftop_room_feature_1",
+        "img_path": "/images/workspace/rooftop_room/rooftop_room_feature_1.png"
+      },
+      {
+        "img_name": "rooftop_room_feature_2",
+        "img_path": "/images/workspace/rooftop_room/rooftop_room_feature_2.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/miniroomcopy-ca6f4f9602b0497daec4f9e19b17979d/",
+    "tags": ["cloth", "rooftop", "room"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater6",
+      "name": "creater6"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Forest Ligt",
+    "description": "숲 속에 있는 불빛 3D 모델입니다.",
+    "category": "workspace",
+    "price": 7382,
+    "img_info": [
+      {
+        "img_name": "forest_light",
+        "img_path": "/images/workspace/forest_light/forest_light.png"
+      },
+      {
+        "img_name": "forest_light_feature_1",
+        "img_path": "/images/workspace/forest_light/forest_light_feature_1.png"
+      },
+      {
+        "img_name": "forest_light_feature_2",
+        "img_path": "/images/workspace/forest_light/forest_light_feature_2.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/forestlightscopy-521eb6c5f99ea028e3e82dd72d86acaf/",
+    "tags": ["cloth", "forest", "light"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater7",
+      "name": "creater7"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Island",
+    "description": "무인도 3D 모델입니다.",
+    "category": "workspace",
+    "price": 3856,
+    "img_info": [
+      {
+        "img_name": "island_iso",
+        "img_path": "/images/workspace/island/island_iso.png"
+      },
+      {
+        "img_name": "island_feature_1",
+        "img_path": "/images/workspace/island/island_feature_1.png"
+      },
+      {
+        "img_name": "island_feature_2",
+        "img_path": "/images/workspace/island/island_feature_2.png"
+      }
+    ],
+    "model_url": "https://my.spline.design/fishexplorerislandcopy-998275f0dd11bef6fc08058a0f552dd0/",
+    "tags": ["cloth", "island"],
+    "upload_date": "2024-06-12",
+    "uploader": {
+      "id": "creater8",
+      "name": "creater8"
+    }
+  }
+]

@@ -34,8 +34,8 @@ export async function GET() {
         description: `item${i}에 대한 설명입니다.`,
         category,
         price,
-        image_url: "/items/image.png",
-        model_url: "/model/model.png",
+        image_url: `/items/${category}.png`,
+        model_url: `/model/${category}.png`,
         tags: [category, name],
         upload_date: "2024-06-12",
         uploader: {

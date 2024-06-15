@@ -11,20 +11,21 @@ interface CategoryProps {
 }
 
 export default function CategoryNav() {
-  const { isOpened, handleOpened } = useHandleOpened(false, "category_wrap");
+  const [isHovered, setIsHovered] = useState(false);
   const [category, setCategory] = useState<CategoryProps[]>([]);
 
   useEffect(() => {
     const fetchCategory = async () => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/category`
+        `${process.env.NEXT_PUBLIC_API_URL}/category`,
+        { method: "GET" }
       );
 
       if (response.ok) {
         const categoryLists = await response.json();
         setCategory(categoryLists.data);
       } else {
-        console.error("Error: 'fetchCategory' has error");
+        console.error("Error: 'fetchCategory' GET has error");
       }
     };
 
@@ -32,12 +33,16 @@ export default function CategoryNav() {
   }, []);
 
   return (
-    <div className="relative">
-      <div onClick={() => handleOpened(!isOpened)}>Category</div>
-      {isOpened && (
+    <div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div>Category</div>
+      {isHovered && (
         <div
           id="category_wrap"
-          className="absolute bg-indigo-400 w-40 rounded overflow-hidden"
+          className="absolute bg-indigo-400 w-40 rounded overflow-hidden z-30"
         >
           {category.map(({ name, path }) => {
             return (
@@ -45,7 +50,7 @@ export default function CategoryNav() {
                 key={path}
                 name={name}
                 path={path}
-                onClick={() => handleOpened(false)}
+                onClick={() => setIsHovered(false)}
               />
             );
           })}
