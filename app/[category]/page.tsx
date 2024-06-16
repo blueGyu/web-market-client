@@ -1,4 +1,4 @@
-import ItemList from "@/components/ui/items/ItemList";
+import ItemList from "@/components/items/ItemList";
 
 interface CategoryProps {
   category: string;

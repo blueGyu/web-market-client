@@ -28,3 +28,17 @@ export function useHandleOpened(initialState: boolean, id: string) {
 
   return { isOpened, handleOpened };
 }
+
+export function checkIsMobile() {
+  const userAgent = window.navigator.userAgent;
+
+  // 모바일 장치의 일반적인 사용자 에이전트를 확인합니다.
+  if (/iPhone|iPad|iPod|Android/i.test(userAgent)) {
+    return true;
+  }
+  if (/Mobi/i.test(userAgent)) {
+    return true;
+  }
+
+  return false;
+}

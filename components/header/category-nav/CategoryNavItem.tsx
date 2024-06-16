@@ -16,7 +16,7 @@ export default function CategoryNavItem({
 
   const backgroundColor = () => {
     if (pathname === path) {
-      return "bg-indigo-800";
+      return "bg-category-selected";
     }
 
     return "";

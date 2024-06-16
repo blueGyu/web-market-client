@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       {banner && (
-        <div className="flex justify-center items-center bg-blue-900 h-10 text-slate-50 text-sm md:text-base">
+        <div className="flex justify-center items-center bg-banner h-10 text-slate-50 text-sm md:text-base">
           포트폴리오 목적으로 만들어진 웹사이트 입니다.
           <Close
             className="absolute right-5"

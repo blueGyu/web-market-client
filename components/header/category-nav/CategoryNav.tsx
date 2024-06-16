@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useHandleOpened } from "@/lib/utils";
 import CategoryNavItem from "./CategoryNavItem";
+import { Menu } from "@mui/icons-material";
 
 interface CategoryProps {
   path: string;
@@ -34,7 +35,7 @@ export default function CategoryNav() {
 
   return (
     <div
-      className="relative"
+      className="relative hidden md:block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -42,7 +43,7 @@ export default function CategoryNav() {
       {isHovered && (
         <div
           id="category_wrap"
-          className="absolute bg-indigo-400 w-40 rounded overflow-hidden z-30"
+          className="absolute bg-category-nav w-40 rounded overflow-hidden z-30"
         >
           {category.map(({ name, path }) => {
             return (

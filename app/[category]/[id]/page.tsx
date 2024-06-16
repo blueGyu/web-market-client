@@ -1,5 +1,3 @@
-import Spline from "@splinetool/react-spline";
-
 interface itemPageProps {
   id: string;
   categroy: string;
@@ -10,6 +8,6 @@ interface testProps {
 }
 
 export default function ItemPage({ params }: testProps) {
-  const { id } = params;
-  return <div>page</div>;
+  const { categroy, id } = params;
+  return <div></div>;
 }

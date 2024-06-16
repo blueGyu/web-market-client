@@ -1,3 +1,9 @@
+import { ReactNode } from "react";
+
+export interface Children {
+  children: ReactNode;
+}
+
 type imageProps = { img_name: string; img_path: string };
 
 export interface Items {
