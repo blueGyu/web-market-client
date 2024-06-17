@@ -1,14 +1,7 @@
 import ItemList from "@/components/items/ItemList";
+import type { Params } from "@/lib/definitions";
 
-interface CategoryProps {
-  category: string;
-}
-
-interface ParamProps {
-  params: CategoryProps;
-}
-
-export default function CategoryPage({ params }: ParamProps) {
+export default function CategoryPage({ params }: Params) {
   const { category } = params;
   return <ItemList category={category} />;
 }

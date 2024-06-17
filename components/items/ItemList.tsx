@@ -2,16 +2,10 @@
 
 import { useEffect, useState } from "react";
 import CategoryCard from "./ItemCard";
-import type { Items } from "@/lib/definitions";
-
-interface CategoryProps {
-  path: string;
-  name: string;
-  image_url: string;
-}
+import type { Item } from "@/lib/definitions";
 
 export default function ItemList({ category }: { category: string }) {
-  const [items, setItems] = useState<Items[]>([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -36,7 +30,7 @@ export default function ItemList({ category }: { category: string }) {
   }, [category]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row gap-4">
       {items.map((item) => {
         return <CategoryCard key={item.id} {...item} />;
       })}

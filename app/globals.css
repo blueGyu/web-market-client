@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --header-height: 4rem;
   --banner-bg-color: #1d4ed8;
   --item-card-bg-color: #f9fafb;
   --item-card-shadow-color: #3f3f46;
@@ -12,6 +13,8 @@
   --category-nav-hovered: #6366f1;
   --image-index-none-seleted: black;
   --image-index-selected: white;
+  --page-min-height: calc(100vh - var(--header-height));
+
   background-color: white;
   color: black;
 }
@@ -26,6 +29,7 @@
   --category-nav-hovered: #3730a3;
   --image-index-none-seleted: white;
   --image-index-selected: black;
+
   background-color: black;
   color: white;
 }

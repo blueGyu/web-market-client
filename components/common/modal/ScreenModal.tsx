@@ -1,7 +1,7 @@
-import type { Children } from "@/lib/definitions";
+import type { ChildrenNode } from "@/lib/definitions";
 import { createPortal } from "react-dom";
 
-interface ScreenModalProps extends Children {
+interface ScreenModalProps extends ChildrenNode {
   id: string;
   target: Element;
 }

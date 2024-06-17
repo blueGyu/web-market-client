@@ -1,35 +1,38 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { CategoryGroup } from "@/lib/definitions";
 
-interface CategoryItemProps {
-  path: string;
-  name: string;
+interface CategoryItemProps extends CategoryGroup {
   onClick: () => void;
 }
 
 export default function CategoryNavItem({
-  path,
-  name,
+  categories,
   onClick,
 }: CategoryItemProps) {
   const pathname = usePathname().split("/")[1];
 
-  const backgroundColor = () => {
-    if (pathname === path) {
-      return "bg-category-selected";
-    }
-
-    return "";
-  };
-
   return (
-    <Link
-      key={path}
-      className={`block py-3 pl-3 hover:bg-indigo-600 ${backgroundColor()}`}
-      href={`/${path}`}
-      onClick={onClick}
-    >
-      {name}
-    </Link>
+    <>
+      {categories.map(({ name, path }) => {
+        const backgroundColor = () => {
+          if (pathname === path) {
+            return "bg-category-selected";
+          }
+
+          return "";
+        };
+        return (
+          <Link
+            key={path}
+            className={`block py-3 pl-3 hover:bg-indigo-600 ${backgroundColor()}`}
+            href={`/${path}`}
+            onClick={onClick}
+          >
+            {name}
+          </Link>
+        );
+      })}
+    </>
   );
 }

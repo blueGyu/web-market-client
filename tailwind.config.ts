@@ -9,6 +9,10 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      height: {
+        header: "var(--header-height)",
+        page: "var(--page-min-height)",
+      },
       colors: {
         "item-card": "var(--item-card-bg-color)",
         "item-card-shadow": "var(--item-card-shadow-color)",

@@ -1,10 +1,19 @@
-import type { Items } from "@/lib/definitions";
+import type { Item, Category } from "@/lib/definitions";
 
 export async function GET() {
   try {
-    const data = await fetch(
+    const response = await fetch(
       `${process.env.NEXT_PUBLIC_URL}/json/category.json`
-    ).then((data) => data.json());
+    );
+
+    if (!response.ok) {
+      return Response.json(
+        { message: "Error fetchItems: Failed to fetch data" },
+        { status: 500 }
+      );
+    }
+
+    const data: Category[] = await response.json();
 
     // 데이터를 DB에서 가져오기 될 경우 추가 코드 작성하기
 
@@ -16,7 +25,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    const { category } = await request.json();
+    const { category, id } = await request.json();
 
     if (!category) {
       return Response.json(
@@ -33,21 +42,21 @@ export async function POST(request: Request) {
       );
     }
 
-    const reponse = await fetch(`${api_url}/json/items.json`);
-    if (!reponse.ok) {
+    const response = await fetch(`${api_url}/json/items.json`);
+    if (!response.ok) {
       return Response.json(
         { message: "Error fetchItems: Failed to fetch data" },
         { status: 500 }
       );
     }
 
-    const data: Items[] = await reponse.json();
+    const data: Item[] = await response.json();
 
-    const checkImage = data.map((eachData: Items) => {
+    const checkImage = data.map((eachData: Item) => {
       if (eachData.img_info.length < 1) {
         return {
           ...eachData,
-          img_info: { img_name: "No image", img_path: "icon" },
+          img_info: [{ img_name: "No image", img_path: "icon" }],
         };
       } else {
         return eachData;
@@ -59,7 +68,13 @@ export async function POST(request: Request) {
     if (category === "all") {
       returnData = checkImage;
     } else {
-      returnData = checkImage.filter((data) => data.category === category);
+      returnData = checkImage.filter(
+        (data: Item) => data.category === category
+      );
+
+      if (id) {
+        returnData = returnData.filter((data: Item) => data.id === id);
+      }
     }
 
     return Response.json(

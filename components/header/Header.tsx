@@ -1,9 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ThemeSwitch from "./theme/ThemeSwitch";
-import CategoryNav from "./category-nav/CategoryNav";
-import { useState } from "react";
+import Category from "./category-nav/Category";
 import { Close } from "@mui/icons-material";
 
 export default function Header() {
@@ -25,13 +25,14 @@ export default function Header() {
           />
         </div>
       )}
-      <header className="flex justify-between items-center h-16 px-5 md:px-10">
+      <header className="flex justify-between items-center h-header px-2.5 md:px-5">
         <div className="flex space-x-20">
           <div onClick={toMainPage}>WEB MARKET</div>
-          <CategoryNav />
+          <Category type="horizontal" />
         </div>
         <div className="flex space-x-3">
           <ThemeSwitch />
+          <Category type="vertical" />
         </div>
       </header>
     </>

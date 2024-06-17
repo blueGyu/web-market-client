@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-export interface Children {
+export interface ChildrenNode {
   children: ReactNode;
 }
 
 type imageProps = { img_name: string; img_path: string };
 
-export interface Items {
+export interface Item {
   id: string;
   name: string;
   description: string;
@@ -19,5 +19,22 @@ export interface Items {
   uploader: {
     id: string;
     name: string;
+  };
+}
+
+export interface Category {
+  path: string;
+  name: string;
+  image_url: string;
+}
+
+export interface CategoryGroup {
+  categories: Category[];
+}
+
+export interface Params {
+  params: {
+    category: string;
+    id: string;
   };
 }
