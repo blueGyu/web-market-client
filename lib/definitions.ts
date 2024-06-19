@@ -22,14 +22,10 @@ export interface Item {
   };
 }
 
-export interface Category {
+export interface NavigationItem {
   path: string;
   name: string;
   image_url: string;
-}
-
-export interface CategoryGroup {
-  categories: Category[];
 }
 
 export interface Params {

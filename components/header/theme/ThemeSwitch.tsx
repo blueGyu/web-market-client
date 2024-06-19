@@ -1,7 +1,8 @@
 "use client";
 
-import { DarkModeRounded, LightModeRounded } from "@mui/icons-material";
 import { useEffect, useState } from "react";
+import Icon from "@/components/common/Icon";
+import { DarkModeRounded, LightModeRounded } from "@mui/icons-material";
 
 export default function ThemeSwitch() {
   const [isDark, setIsDark] = useState(false);
@@ -46,11 +47,8 @@ export default function ThemeSwitch() {
   };
 
   return (
-    <div
-      className="flex justify-center items-center size-7"
-      onClick={handleTheme}
-    >
+    <Icon onClick={handleTheme}>
       {isDark ? <LightModeRounded /> : <DarkModeRounded />}
-    </div>
+    </Icon>
   );
 }

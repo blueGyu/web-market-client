@@ -13,6 +13,9 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
+    "framer-motion": "^11.2.10",
+    "mobx": "^6.12.4",
+    "mobx-react": "^9.1.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

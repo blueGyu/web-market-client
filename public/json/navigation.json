@@ -1,0 +1,14 @@
+[
+  {
+    "name": "전체보기",
+    "path": "all"
+  },
+  {
+    "name": "작업공간",
+    "path": "workspace"
+  },
+  {
+    "name": "옷",
+    "path": "cloth"
+  }
+]

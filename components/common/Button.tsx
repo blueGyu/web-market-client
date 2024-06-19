@@ -2,22 +2,13 @@ import type { ChildrenNode } from "@/lib/definitions";
 import { MouseEvent } from "react";
 
 interface ViewerButtonProps extends ChildrenNode {
-  size: string;
-  backgroundColor: string;
-  textColor: string;
   onClick?: (event: MouseEvent) => void;
 }
 
-export default function Button({
-  size,
-  backgroundColor,
-  textColor,
-  onClick,
-  children,
-}: ViewerButtonProps) {
+export default function Button({ onClick, children }: ViewerButtonProps) {
   return (
     <div
-      className={`flex justify-center items-center rounded ${size} ${backgroundColor} ${textColor}`}
+      className="flex justify-center items-center w-full h-11 bg-viewer-button text-white rounded"
       onClick={onClick}
     >
       {children}

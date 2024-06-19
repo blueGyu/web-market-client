@@ -1,4 +1,4 @@
-import type { Item, Category } from "@/lib/definitions";
+import type { Item, NavigationItem } from "@/lib/definitions";
 
 export async function GET() {
   try {
@@ -13,7 +13,7 @@ export async function GET() {
       );
     }
 
-    const data: Category[] = await response.json();
+    const data: NavigationItem[] = await response.json();
 
     // 데이터를 DB에서 가져오기 될 경우 추가 코드 작성하기
 

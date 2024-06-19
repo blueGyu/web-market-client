@@ -20,6 +20,8 @@ const config: Config = {
         "viewer-button": "var(--viwer-button-bg-color)",
         "category-nav": "var(--category-nav-bg-color)",
         "category-selected": "var(--category-nav-selected)",
+        circle: "var(--img-index-none)",
+        "circle-none": "var(--img-index-selected)",
       },
     },
   },
