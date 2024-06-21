@@ -20,9 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen min-w-[350px]">
           <Header />
-          <main className="min-h-page py-2.5 px-2.5 md:px-5 md:py-5">
-            {children}
-          </main>
+          {children}
         </div>
       </body>
     </html>

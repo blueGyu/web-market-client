@@ -5,16 +5,11 @@ import { createPortal } from "react-dom";
 import type { Item } from "@/lib/definitions";
 import ItemImage from "./ItemImage";
 import { Close, AddShoppingCart } from "@mui/icons-material/";
+import useCart from "@/store/useCart";
 
-export default function ItemCard({
-  category,
-  name,
-  price,
-  description,
-  img_info,
-  model_url,
-  uploader,
-}: Item) {
+export default function ItemCard({ item }: { item: Item }) {
+  const { category, name, price, description, img_info, model_url, uploader } =
+    item;
   const [show3D, setShow3D] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
@@ -29,6 +24,7 @@ export default function ItemCard({
   };
 
   const handleShowCart = () => {
+    useCart.addCart(item);
     setShowCart(true);
     document.body.classList.add("overflow-hidden");
   };

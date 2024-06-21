@@ -38,6 +38,7 @@ export default function ItemImage({ img_info }: Pick<Item, "img_info">) {
           width={0}
           height={0}
           sizes="100vh"
+          priority
         />
       </div>
       <div className="absolute bottom-2.5 z-10 flex justify-center items-center space-x-2">

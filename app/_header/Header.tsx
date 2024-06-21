@@ -1,11 +1,11 @@
 import Link from "next/link";
 import ThemeSwitch from "@/components/header/theme/ThemeSwitch";
 import Banner from "@/components/header/Banner";
-import Icon from "@/components/common/Icon";
-import { ShoppingCart } from "@mui/icons-material";
 import type { NavigationItem } from "@/lib/definitions";
 import HorizontalNav from "@/components/header/navigation/HorizontalNav";
 import VerticalNav from "@/components/header/navigation/VerticalNav";
+import { ShoppingCart } from "@mui/icons-material";
+import CartAlarm from "@/components/cart/CartAlarm";
 
 export default async function Header() {
   const navigationItem: NavigationItem[] = await fetch(
@@ -31,8 +31,14 @@ export default async function Header() {
           <HorizontalNav items={navigationItem} />
         </div>
         <div className="flex items-center h-full space-x-3">
-          <div id="cart" className="flex justify-center items-center size-6">
-            <ShoppingCart />
+          <div className="relative">
+            <Link
+              className="flex justify-center items-center size-6"
+              href="/cart"
+            >
+              <ShoppingCart />
+              <CartAlarm />
+            </Link>
           </div>
           <ThemeSwitch />
           <VerticalNav items={navigationItem} />

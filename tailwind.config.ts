@@ -9,9 +9,15 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      maxHeight: {
+        page: "var(--page-height)",
+      },
+      minHeight: {
+        page: "var(--page-height)",
+      },
       height: {
         header: "var(--header-height)",
-        page: "var(--page-min-height)",
+        page: "var(--page-height)",
       },
       colors: {
         "item-card": "var(--item-card-bg-color)",
