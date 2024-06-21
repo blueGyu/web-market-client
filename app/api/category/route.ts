@@ -3,7 +3,7 @@ import type { Item, NavigationItem } from "@/lib/definitions";
 export async function GET() {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/json/category.json`
+      `${process.env.NEXT_PUBLIC_URL}/json/navigation.json`
     );
 
     if (!response.ok) {
