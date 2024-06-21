@@ -2,11 +2,14 @@ import type { Item } from "@/lib/definitions";
 import ItemCard from "@/components/items/ItemCard";
 
 export default async function ItemsList({ category }: { category: string }) {
-  const items: Item[] = await fetch(`http://localhost:3000/api/category`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ category }),
-  })
+  const items: Item[] = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/category`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ category }),
+    }
+  )
     .then((data) => data.json())
     .then((data) => data.data)
     .catch((error) => console.error("Error: 'fetchCategory' POST has error"));

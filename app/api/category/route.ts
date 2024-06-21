@@ -2,7 +2,9 @@ import type { Item, NavigationItem } from "@/lib/definitions";
 
 export async function GET() {
   try {
-    const response = await fetch(`http://localhost:3000/json/category.json`);
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/json/category.json`
+    );
 
     if (!response.ok) {
       return Response.json(
@@ -32,7 +34,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const api_url = "http://localhost:3000";
+    const api_url = process.env.NEXT_PUBLIC_URL;
     if (!api_url) {
       return Response.json(
         { message: "Error fetchItems: NEXT_PUBLIC_URL is not defined" },
