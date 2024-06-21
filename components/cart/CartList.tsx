@@ -31,10 +31,12 @@ const CartList = observer(() => {
   return (
     <>
       <main className="flex flex-col justify-between min-h-page px-2.5 md:flex-row md:px-20">
-        <div className="basis-2/3 pb-2.5 md:py-2.5 md:mr-2.5 space-y-2.5">
-          {useCart.cartItems.map((item) => {
-            return <CartItem key={item.id} item={item} />;
-          })}
+        <div className="flex justify-center items-center basis-2/3 pb-2.5 md:py-2.5 md:mr-2.5 space-y-2.5">
+          {useCart.cartItems.length === 0
+            ? "장바구니가 비어 있습니다."
+            : useCart.cartItems.map((item) => {
+                return <CartItem key={item.id} item={item} />;
+              })}
         </div>
         <div className="sticky bottom-0 md:top-0 flex flex-col justify-between basis-1/3 min-w-[300px] max-h-page py-2.5 bg-white">
           <div className="flex flex-col justify-between w-full border rounded p-2.5 h-[150px]">
