@@ -9,7 +9,7 @@ import CartAlarm from "@/components/cart/CartAlarm";
 
 export default async function Header() {
   const navigationItem: NavigationItem[] = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/category`,
+    `http://localhost:3000/api/category`,
     {
       method: "GET",
     }
