@@ -6,6 +6,7 @@ import type { Item } from "@/lib/definitions";
 import ItemImage from "./ItemImage";
 import { Close, AddShoppingCart } from "@mui/icons-material/";
 import useCart from "@/store/useCart";
+import Button from "@/components/common/Button";
 
 export default function ItemCard({ item }: { item: Item }) {
   const { category, name, price, description, img_info, model_url, uploader } =
@@ -45,22 +46,14 @@ export default function ItemCard({ item }: { item: Item }) {
           <p className="text-center">{price} 원</p>
         </div>
         <div className="flex items-center w-full">
-          <div className="hidden md:block w-full h-11 mr-2.5">
-            <button
-              className="flex justify-center items-center w-full h-full bg-indigo-400 rounded text-white cursor-pointer"
-              onClick={handleShow3D}
-            >
-              3D 모델보기
-            </button>
+          <div className="hidden md:block w-full mr-2.5">
+            <Button onClick={handleShow3D}>3D 모델보기</Button>
           </div>
           <div className="w-full md:max-w-11 h-11" onClick={handleShowCart}>
-            <button
-              className="flex justify-center items-center w-full h-full bg-indigo-400 rounded text-white cursor-pointer"
-              onClick={handleShowCart}
-            >
+            <Button onClick={handleShowCart}>
               <AddShoppingCart className="hidden md:block" />
               <p className="block md:hidden">장바구니 담기</p>
-            </button>
+            </Button>
           </div>
         </div>
       </div>
@@ -89,14 +82,7 @@ export default function ItemCard({ item }: { item: Item }) {
                   <div className="text-end">{price} 원</div>
                   <div>{description}</div>
                 </div>
-                <div className="w-full h-11">
-                  <button
-                    className="flex justify-center items-center w-full h-full bg-indigo-400 rounded text-white"
-                    onClick={handleShowCart}
-                  >
-                    장바구니 담기
-                  </button>
-                </div>
+                <Button onClick={handleShowCart}>장바구니 담기</Button>
               </div>
             </div>
           </div>,
@@ -105,7 +91,7 @@ export default function ItemCard({ item }: { item: Item }) {
       {showCart &&
         createPortal(
           <div className="fixed top-0 left-0 z-30 w-screen h-screen flex items-center justify-center bg-slate-400/60">
-            <div className="flex flex-col justify-between w-[300px] h-[200px] bg-white p-2.5 rounded">
+            <div className="flex flex-col justify-between w-[300px] h-[200px] p-2.5 rounded bg-item-card">
               <button
                 className="flex justify-end cursor-pointer"
                 onClick={handleHideCart}
@@ -113,12 +99,7 @@ export default function ItemCard({ item }: { item: Item }) {
                 <Close />
               </button>
               <div className="text-center">장바구니에 상품이 담겼습니다.</div>
-              <button
-                className="flex justify-center items-center w-full h-11 bg-indigo-400 rounded"
-                onClick={handleHideCart}
-              >
-                확인
-              </button>
+              <Button onClick={handleHideCart}>확인</Button>
             </div>
           </div>,
           document.body

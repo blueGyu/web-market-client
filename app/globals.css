@@ -5,13 +5,13 @@
 :root {
   --header-height: 4rem;
   --page-height: calc(100vh - var(--header-height));
-  background-color: white;
-  color: black;
 
+  --background-color: white;
+  --text-color: black;
   --banner-bg-color: #1d4ed8;
   --item-card-bg-color: #f9fafb;
   --item-card-shadow-color: #3f3f46;
-  --viwer-button-bg-color: #6366f1;
+  --button-bg-color: #6366f1;
   --category-nav-bg-color: #c7d2fe;
   --category-nav-selected: #818cf8;
   --category-nav-hovered: #6366f1;
@@ -23,15 +23,20 @@
   --banner-bg-color: #172554;
   --item-card-bg-color: #27272a;
   --item-card-shadow-color: #52525b;
-  --viwer-button-bg-color: #312e81;
+  --button-bg-color: #312e81;
   --category-nav-bg-color: #312e81;
   --category-nav-selected: #1e1b4b;
   --category-nav-hovered: #3730a3;
   --img-index-none: white;
   --img-index-selected: black;
+  --background-color: black;
+  --text-color: white;
+}
 
-  background-color: black;
-  color: white;
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 * {

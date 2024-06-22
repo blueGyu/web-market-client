@@ -3,7 +3,7 @@ import { Mouse } from "@mui/icons-material";
 export default function Home() {
   return (
     <main className="relative flex justify-center items-center w-screen h-page">
-      <div className="absolute bottom-5 flex justify-center items-center">
+      <div className="absolute top-5 flex justify-center items-center">
         <Mouse sx={{ fontSize: 16, marginRight: 1 }} />
         클릭하여 애니메이션을 확인해보세요.
       </div>

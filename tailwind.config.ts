@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -23,7 +24,7 @@ const config: Config = {
         "item-card": "var(--item-card-bg-color)",
         "item-card-shadow": "var(--item-card-shadow-color)",
         banner: "var(--banner-bg-color)",
-        "viewer-button": "var(--viwer-button-bg-color)",
+        button: "var(--button-bg-color)",
         "category-nav": "var(--category-nav-bg-color)",
         "category-selected": "var(--category-nav-selected)",
         circle: "var(--img-index-none)",

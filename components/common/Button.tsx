@@ -8,7 +8,7 @@ interface ViewerButtonProps extends ChildrenNode {
 export default function Button({ onClick, children }: ViewerButtonProps) {
   return (
     <div
-      className="flex justify-center items-center w-full h-11 bg-viewer-button text-white rounded"
+      className="flex justify-center items-center w-full h-11 bg-button text-white rounded"
       onClick={onClick}
     >
       {children}
